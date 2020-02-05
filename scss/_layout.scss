@@ -56,18 +56,51 @@
       transition: .25s;
     }
   }
+  &__selected {
+    color: #BD2380;
+  }
   &__websiteExamples {
     padding-top: 85px;
   }
   &__imageGroup {
     margin-bottom: 70px;
+    position: relative;
+    &:hover .examples__overlay {
+      display: initial;
+    }
+  }
+  &__overlay {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 30px);
+    height: calc(100% - 48px);
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 266px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      display: flex;
+    }
   }
   &__imageLink {
-    &:hover {
+    padding: 12px 32px;
+    text-align: center;
+    color: white;
+    background: #1164F3;
+    border-radius: 4px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:focus, &:hover {
       text-decoration: none;
+      color: #ffffff;
     }
   }
   &__image {
+    position: relative;
     width: 100%;
     height: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -81,6 +114,7 @@
     color: rgba(0, 0, 0, 0.6);
   }
 }
+
 .preview {
   padding: 60px 0 80px;
   &__back {
@@ -101,10 +135,16 @@
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    svg {
-      margin: 0px 20px;
-      transition: .25s; 
-      :hover {
+  }
+  &__svgContainer {
+    margin: 0px 20px;
+    transition: .25s; 
+    width:50px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      .preview__svg {
         fill: #BD2380;
         cursor: pointer;
         fill-opacity: 1;
@@ -125,6 +165,8 @@
   }
   &__iframe {
     border: 1px solid #A7A7A7;
+    width: 100%;
+    height: 633px;
     &--desktop {
       width: 100%;
       height: 633px;
