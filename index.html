@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Domine:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
     <!--[if lt IE 9]>
@@ -18,625 +19,1547 @@
     <![endif]-->
   <!-- End of HTML5 Shiv -->
 </head>
-
+<script>
+  function hideExamples() { 
+    document.getElementById("examples").style.display="none"; 
+    document.getElementById("preview").style.display="block"; 
+  }
+  function hidePreview() { 
+    document.getElementById("examples").style.display="block"; 
+    document.getElementById("preview").style.display="none"; 
+  }
+</script>
 <body>
-  <section class="hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h1 class="hero__header">Templates</h1>
-          <p class="hero__text">Kick-start your website with these powerful templates, made for every industry. Customise one and unleash your extraordinary website online.</p>
-        </div>
-        <div class="col-md-4">
-          <img class="hero__image" alt="Laptop image with a website up on the display" src="img/laptop.png"/>
+  <div id="examples">
+    <section class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="hero__header">Templates</h1>
+            <p class="hero__text">Kick-start your website with these powerful templates, made for every industry. Customise one and unleash your extraordinary website online.</p>
+          </div>
+          <div class="col-md-4">
+            <img class="hero__image" alt="Laptop image with a website up on the display" src="img/laptop.png"/>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="examples">
+    </section>
+    <section class="examples">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 examples__stickyPlaceholderColumn">
+          </div>
+          <div class="col-md-3 examples__stickyColumn">
+            <h1 class="examples__category">
+              Categories
+            </h1>
+            <p class="examples__subCategory filter-button examples__selected" data-filter="all">
+              All
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="art">
+              Art &amp; Design
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="business">
+              Business &amp; Services
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="community">
+              Community &amp; Non-Profit
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="education">
+              Education
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="entertainment">
+              Entertainment &amp; Media
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="fashion">
+              Fashion &amp; Beauty
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="food">
+              Food &amp; Restaurant
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="health">
+              Health &amp; Fitness
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="home">
+              Home &amp; Living
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="logistics">
+              Logistics
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="photography">
+              Photography
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="popular">
+              Popular
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="portfolio">
+              Portfolio
+            </p>
+            <p class="examples__subCategory filter-button" data-filter="travel">
+              Travel &amp; Lifestyle
+            </p>
+          </div>
+          <div class="col-md-9 examples__websiteExamples">
+
+            <div class="col-md-6 examples__imageGroup filter business education">
+              <div class="examples__overlay">
+                <a href="https://academic-tutoring.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/academictutoring.png"/>
+              <p class="examples__imageText">Academic Tutoring</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business education">
+              <div class="examples__overlay">
+                <a href="https://accountant.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy" alt="website" src="img/all/accountant-v2.png"/>
+              <p class="examples__imageText">Accounting</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter health">
+              <div class="examples__overlay">
+                <a href="https://agriculture.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/agriculture-v2.png"/>
+              <p class="examples__imageText">Agriculture</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://animal-groomers.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/animalgroomers.png"/>
+              <p class="examples__imageText">Animal Groomers</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter entertainment">
+              <div class="examples__overlay">
+                <a href="https://app-landing-page.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/app-landing-page.png"/>
+              <p class="examples__imageText">App Landing Page</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://architect.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/architectv2.png"/>
+              <p class="examples__imageText">Architect</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter art portfolio">
+              <div class="examples__overlay">
+                <a href="https://artist.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/artist.png"/>
+              <p class="examples__imageText">Artist</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://auto-repairs.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/autorepairs.png"/>
+              <p class="examples__imageText">Auto Repairs</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://bakery.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bakery.png"/>
+              <p class="examples__imageText">Bakery</p>
+            </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://barber-shop.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/barbershop.png"/>
+              <p class="examples__imageText">Barber Shop</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://beauty-salon.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/beauty-salon-v2.png"/>
+              <p class="examples__imageText">Beauty Salon</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://beauty-store-single-page.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/beautystore-singlepage.png"/>
+              <p class="examples__imageText">Beauty Store</p>
+            </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://fashion-store.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/benque.png"/>
+              <p class="examples__imageText">Fashion</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter travel">
+              <div class="examples__overlay">
+                <a href="https://biography.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/biography.png"/>
+              <p class="examples__imageText">Biography</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter">
+              <div class="examples__overlay">
+                <a href="https://blank.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/blank.png"/>
+              <p class="examples__imageText">Blank</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://blinds.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/blinds.png"/>
+              <p class="examples__imageText">Blinds</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://body-guard.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bodyguard.png"/>
+              <p class="examples__imageText">Body Guard</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business education">
+              <div class="examples__overlay">
+                <a href="https://bookstore-single-page.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bookstore2-singlepage.png"/>
+              <p class="examples__imageText">Bookstore</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://brick-paver.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/brick-paver.png"/>
+              <p class="examples__imageText">Brick Paver</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://bricklayer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bricklayer.png"/>
+              <p class="examples__imageText">Brick Layer</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://burger-cafe.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/burger-cafe.png"/>
+              <p class="examples__imageText">Burger Cafe</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://business-center.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/business-center.png"/>
+              <p class="examples__imageText">Business Center</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://car-dealer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/car-dealer.png"/>
+              <p class="examples__imageText">Car Dealer</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business education">
+              <div class="examples__overlay">
+                <a href="https://career-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/careerservices.png"/>
+              <p class="examples__imageText">Career Services</p>
+            </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business home">
+              <div class="examples__overlay">
+                <a href="https://carpenter.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/carpenter.png"/>
+              <p class="examples__imageText">Carpenter</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home logistics">
+              <div class="examples__overlay">
+                <a href="https://car-rental.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/carrental.png"/>
+              <p class="examples__imageText">Car Rental</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food home">
+              <div class="examples__overlay">
+                <a href="https://catering-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cateringservices.png"/>
+              <p class="examples__imageText">Catering Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business community">
+              <div class="examples__overlay">
+                <a href="https://charity.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/charity.png"/>
+              <p class="examples__imageText">Charity</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business community">
+              <div class="examples__overlay">
+                <a href="https://childcare.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/childcare_v2.png"/>
+              <p class="examples__imageText">Child Care</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business travel">
+              <div class="examples__overlay">
+                <a href="https://city-hotel.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cityhotel.png"/>
+              <p class="examples__imageText">City Hotel</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://cleaning-services.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cleaningservices.png"/>
+              <p class="examples__imageText">Cleaning Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://coffee-house.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/coffee-house-v2.png"/>
+              <p class="examples__imageText">Coffee Shop</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://concrete-slabs.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/concreteslabs.png"/>
+              <p class="examples__imageText">Concrete Slabs</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://conference.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/conferencev3.png"/>
+              <p class="examples__imageText">Conference</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter">
+              <div class="examples__overlay">
+                <a href="https://consultant.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/consultant.png"/>
+              <p class="examples__imageText">Consultant</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://cosmetic-surgery.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cosmetic-surgery.png"/>
+              <p class="examples__imageText">Cosmetic Surgery</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter art portfolio">
+              <div class="examples__overlay">
+                <a href="https://creative-portfolio.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/creativeportfolio.png"/>
+              <p class="examples__imageText">Creative Portfolio</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter health travel">
+              <div class="examples__overlay">
+                <a href="https://crossfit.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/crossfit-v2.png"/>
+              <p class="examples__imageText">Cross Fit</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business entertainment health">
+              <div class="examples__overlay">
+                <a href="https://dance-studio.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dancestudiov2.png"/>
+              <p class="examples__imageText">Dance Studio</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business health">
+              <div class="examples__overlay">
+                <a href="https://dentist.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dentist.png"/>
+              <p class="examples__imageText">Dentist</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business health">
+              <div class="examples__overlay">
+                <a href="https://dentist-v2.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dentistv2.png"/>
+              <p class="examples__imageText">Dentist V2</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business">
+              <div class="examples__overlay">
+                <a href="https://digital-agency.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/digital-agency.png"/>
+              <p class="examples__imageText">Digital Agency</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business entertainment">
+              <div class="examples__overlay">
+                <a href="https://dj.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dj.png"/>
+              <p class="examples__imageText">DJ</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://electrician.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/electrician.png"/>
+              <p class="examples__imageText">Electrician</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://equipment-rental.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/equipment-rental.png"/>
+              <p class="examples__imageText">Equipment Rental</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business entertainment">
+              <div class="examples__overlay">
+                <a href="https://event-venue.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/event-venue.png"/>
+              <p class="examples__imageText">Event Venue</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business fashion portfolio">
+              <div class="examples__overlay">
+                <a href="https://fashion-designer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashion-designer.png"/>
+              <p class="examples__imageText">Fashion Designer</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://fashion-store.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashion-store.png"/>
+              <p class="examples__imageText">Fashion Store</p>
+            </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion portfolio">
+              <div class="examples__overlay">
+                <a href="https://fashion-collection.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashioncollection.png"/>
+              <p class="examples__imageText">Fashion Collection</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://financial-planners.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/financial-planners.png"/>
+              <p class="examples__imageText">Financial Planners</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion health travel">
+              <div class="examples__overlay">
+                <a href="https://fitness-gym.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fitness-gym-v2.png"/>
+              <p class="examples__imageText">Fitness Gym </p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food health">
+              <div class="examples__overlay">
+                <a href="https://fresh-produce.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/freshproduce.png"/>
+              <p class="examples__imageText">Fresh Produce</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://funeral-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/funeral-services.png"/>
+              <p class="examples__imageText">Funeral Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business portfolio">
+              <div class="examples__overlay">
+                <a href="https://furniture-collection.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/furniture-collection.png"/>
+              <p class="examples__imageText">Furniture Collection</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food health">
+              <div class="examples__overlay">
+                <a href="https://gardener.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/gardener.png"/>
+              <p class="examples__imageText">Gardener</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://glass-repairs.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/glass-repairs.png"/>
+              <p class="examples__imageText">Glass Repairs</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business food health">
+              <div class="examples__overlay">
+                <a href="" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/grapefarm.png"/>
+              <p class="examples__imageText">Grape Farm</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food health">
+              <div class="examples__overlay">
+                <a href="https://grocery-store-single-page.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/grocerystorev2-singlepage.png"/>
+              <p class="examples__imageText">Grocery Store</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://hair-salon.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/hair-salon.png"/>
+              <p class="examples__imageText">Hair Salon</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://handyman.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/handyman.png"/>
+              <p class="examples__imageText">Handyman</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://product-page.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/hartford.png"/>
+              <p class="examples__imageText">Product Page</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://home-builders.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/homebuilders.png"/>
+              <p class="examples__imageText">Home Builders</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business home">
+              <div class="examples__overlay">
+                <a href="https://home-decor.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/homedecor.png"/>
+              <p class="examples__imageText">Home Decor</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://human-resources.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/humanresources.png"/>
+              <p class="examples__imageText">Human Resources</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://insurance-broker.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/insurance-broker.png"/>
+              <p class="examples__imageText">Insurance Broker</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business home">
+              <div class="examples__overlay">
+                <a href="https://interior-designer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/interior-designer.png"/>
+              <p class="examples__imageText">Interior Designer</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home portfolio">
+              <div class="examples__overlay">
+                <a href="https://interior-collections.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/interiorcollections.png"/>
+              <p class="examples__imageText">Interior Collections</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://financial-planners.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/investpro.png"/>
+              <p class="examples__imageText">Financial Planners</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://it-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/itservicesv2.png"/>
+              <p class="examples__imageText">IT Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://kitchen-wardrobes.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/kitchen-wardrobes.png"/>
+              <p class="examples__imageText">Kitchen Wardrobes</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business photography portfolio travel">
+              <div class="examples__overlay">
+                <a href="https://landscape-photographer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/landscape-photographer.png"/>
+              <p class="examples__imageText">Landscape Photographer</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business home">
+              <div class="examples__overlay">
+                <a href="https://landscape-design.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/landscapedesign.png"/>
+              <p class="examples__imageText">Landscape Design</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://law-firm.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/law-firm.png"/>
+              <p class="examples__imageText">Law Firm</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business community home travel">
+              <div class="examples__overlay">
+                <a href="https://life-coach.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/lifecoach.png"/>
+              <p class="examples__imageText">Life Coach</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business logistics">
+              <div class="examples__overlay">
+                <a href="https://limo-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/limo-services.png"/>
+              <p class="examples__imageText">Limo Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://local-cafe.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/local-cafe-v2.png"/>
+              <p class="examples__imageText">Local Cafe</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://locksmith.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/locksmith-v2.png"/>
+              <p class="examples__imageText">Locksmith</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business logistics">
+              <div class="examples__overlay">
+                <a href="https://logistics.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/logistics.png"/>
+              <p class="examples__imageText">Logistics</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business logistics">
+              <div class="examples__overlay">
+                <a href="https://logistics-freight.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/logisticsfreight.png"/>
+              <p class="examples__imageText">Logistic Freight</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business fashion">
+              <div class="examples__overlay">
+                <a href="https://makeup-artist.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/makeupartist.png"/>
+              <p class="examples__imageText">Make Up Artist</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business fashion home">
+              <div class="examples__overlay">
+                <a href="https://manicure-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/manicureservices.png"/>
+              <p class="examples__imageText">Manicure Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://marketing-agency.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/marketing-agency.png"/>
+              <p class="examples__imageText">Marketing Agency</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://medical-clinic.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/medical-clinic-v2.png"/>
+              <p class="examples__imageText">Medical Clinic</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business entertainment">
+              <div class="examples__overlay">
+                <a href="https://mobile-app.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/mobile-app.png"/>
+              <p class="examples__imageText">Mobile App</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://mortgage-brokers.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/mortgage-brokers.png"/>
+              <p class="examples__imageText">Mortgage Brokers</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://mortgage-brokers.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/mortgage.png"/>
+              <p class="examples__imageText">Mortgage</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home logistics">
+              <div class="examples__overlay">
+                <a href="https://moving-company.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/movingcompany.png"/>
+              <p class="examples__imageText">Moving Company</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://painters.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/painters.png"/>
+              <p class="examples__imageText">Painters</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business entertainment">
+              <div class="examples__overlay">
+                <a href="https://party-planning.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/partyplanning.png"/>
+              <p class="examples__imageText">Party Planning</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion health">
+              <div class="examples__overlay">
+                <a href="https://personal-trainer-gym.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/personal-trainer-gym.png"/>
+              <p class="examples__imageText">Personal Trainer</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://pest-control.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/pest-control.png"/>
+              <p class="examples__imageText">Pest Control</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter art business photography portfolio">
+              <div class="examples__overlay">
+                <a href="https://photographer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/photographer.png"/>
+              <p class="examples__imageText">Photographer</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business community health">
+              <div class="examples__overlay">
+                <a href="https://physiotherapist.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/physiotherapist.png"/>
+              <p class="examples__imageText">Physiotherapist</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://pizza-restaurant.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/pizza-restaurant.png"/>
+              <p class="examples__imageText">Pizza Restaurant</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://plasterer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/plasterer.png"/>
+              <p class="examples__imageText">Plasterer</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://plumber.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/plumber.png"/>
+              <p class="examples__imageText">Plumber</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter art portfolio">
+              <div class="examples__overlay">
+                <a href="https://portfolio.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/portfolio.png"/>
+              <p class="examples__imageText">Portfolio</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://property-manager.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/property-management.png"/>
+              <p class="examples__imageText">Property Management</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://real-estate.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/realestatev3.png"/>
+              <p class="examples__imageText">Real Estate</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter entertainment">
+              <div class="examples__overlay">
+                <a href="https://rock-band.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/rock-band.png"/>
+              <p class="examples__imageText">Rock Band</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://roof-carpenters.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/roofcarpenters.png"/>
+              <p class="examples__imageText">Roof Carpenters</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://seafood-restaurant.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/seafood-restaurant.png"/>
+              <p class="examples__imageText">Seafood Restaurant</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://security-services.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/security-services.png"/>
+              <p class="examples__imageText">Security Services</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://seo-agency.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/seo-agency.png"/>
+              <p class="examples__imageText">SEO Agency</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://auto-repairs.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/smash-repairs-v2.png"/>
+              <p class="examples__imageText">Auto Repairs</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business community">
+              <div class="examples__overlay">
+                <a href="https://soccer-club.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/soccerclub.png"/>
+              <p class="examples__imageText">Soccer Club</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://solar-panels.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/solar-panels-v2.png"/>
+              <p class="examples__imageText">Solar Panels</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion">
+              <div class="examples__overlay">
+                <a href="https://spa.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/spa-v2.png"/>
+              <p class="examples__imageText">Spa</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://storage.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/storage.png"/>
+              <p class="examples__imageText">Storage</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://sushi-restaurant.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/sushi-restaurant-v2.png"/>
+              <p class="examples__imageText">Sushi Restaurant</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business fashion home">
+              <div class="examples__overlay">
+                <a href="https://tailor-shop.siteplus.com/" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tailor-shop.png"/>
+              <p class="examples__imageText">Tailor</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://tattoo-studio.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tattoo-studio.png"/>
+              <p class="examples__imageText">Tattoo Studio</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://tiler.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tiler.png"/>
+              <p class="examples__imageText">Tiler</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business travel">
+              <div class="examples__overlay">
+                <a href="https://tour-guide.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tour-guide-v2.png"/>
+              <p class="examples__imageText">Tour Guide</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business travel">
+              <div class="examples__overlay">
+                <a href="https://bike-event.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tourevent.png"/>
+              <p class="examples__imageText">Tour Event</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://toy-store-single-page.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/toystorev2-singlepage.png"/>
+              <p class="examples__imageText">Toy Store</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business education">
+              <div class="examples__overlay">
+                <a href="https://training-courses.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/training-courses.png"/>
+              <p class="examples__imageText">Training Courses</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business education travel">
+              <div class="examples__overlay">
+                <a href="https://blog-page.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/travelblog.png"/>
+              <p class="examples__imageText">Travel Blog</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business travel">
+              <div class="examples__overlay">
+                <a href="https://travel-tours.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/traveltours.png"/>
+              <p class="examples__imageText">Travel Tours</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://tyre-repairs.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tyrerepairs.png"/>
+              <p class="examples__imageText">Tire Repairs</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://veterinary-clinic.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/veterinaryclinicv2.png"/>
+              <p class="examples__imageText">Veterinary Clinic</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business travel">
+              <div class="examples__overlay">
+                <a href="https://villa-rental.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/villarental.png"/>
+              <p class="examples__imageText">Villa Rental</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business food">
+              <div class="examples__overlay">
+                <a href="https://water-delivery.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/water-delivery-v2.png"/>
+              <p class="examples__imageText">Water Delivery</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://wedding-event.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/wedding-event-v2.png"/>
+              <p class="examples__imageText">Wedding Event</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://wedding-planner.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/wedding-planner.png"/>
+              <p class="examples__imageText">Wedding Planner</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business">
+              <div class="examples__overlay">
+                <a href="https://welder.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/welder-v2.png"/>
+              <p class="examples__imageText">Welder</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business home">
+              <div class="examples__overlay">
+                <a href="https://window-cleaners.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/windowcleaners.png"/>
+              <p class="examples__imageText">Window Cleaners</p>
+           </div>
+            
+            <div class="col-md-6 examples__imageGroup filter business education portfolio">
+              <div class="examples__overlay">
+                <a href="https://writer.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/writer.png"/>
+              <p class="examples__imageText">Writer</p>
+            </div>
+
+            <div class="col-md-6 examples__imageGroup filter business fashion health">
+              <div class="examples__overlay">
+                <a href="https://yoga.siteplus.com" 
+                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  Preview
+                </a>
+              </div>
+              <img class="examples__image" loading="lazy"  alt="website" src="img/all/yoga.png"/>
+              <p class="examples__imageText">Yoga</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="preview" id="preview" style="display:none;">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-          <h1 class="examples__category">
-            Categories
-          </h1>
-          <p class="examples__subCategory filter-button" data-filter="all">
-            All
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="art">
-            Art &amp; Design
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="business">
-            Business &amp; Services
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="community">
-            Community &amp; Non-Profit
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="education">
-            Education
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="entertainment">
-            Entertainment &amp; Media
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="fashion">
-            Fashion &amp; Beauty
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="food">
-            Food &amp; Restaurant
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="health">
-            Health &amp; Fitness
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="home">
-            Home &amp; Living
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="logistics">
-            Logistics
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="photography">
-            Photography
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="popular">
-            Popular
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="portfolio">
-            Portfolio
-          </p>
-          <p class="examples__subCategory filter-button" data-filter="travel">
-            Travel &amp; Lifestyle
+        <div class="col-md-12">
+          <p class="preview__back">
+            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.666611 4.5L4.91661 8.75L5.9189 7.74771L2.67119 4.5L5.9189 1.25229L4.91661 0.25L0.666611 4.5Z" class="examples__backArrow" fill="#A7A7A7"/>
+            </svg>
+            <a href="#" onclick="hidePreview()">Back</a>
           </p>
         </div>
-        <div class="col-md-9 examples__websiteExamples">
-
-          <div class="col-md-6 examples__imageGroup filter business education">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/academictutoring.png"/>
-            <p class="examples__imageText">Academic Tutoring</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/accountant-v2.png"/>
-            <p class="examples__imageText">Accountant</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/agriculture-v2.png"/>
-            <p class="examples__imageText">Agriculture</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/animalgroomers.png"/>
-            <p class="examples__imageText">Animal Groomers</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter entertainment">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/app-landing-page.png"/>
-            <p class="examples__imageText">App Landing Page</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/architectv2.png"/>
-            <p class="examples__imageText">Architect</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/artist.png"/>
-            <p class="examples__imageText">Artist</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/autorepairs.png"/>
-            <p class="examples__imageText">Auto Repairs</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/bakery.png"/>
-            <p class="examples__imageText">Bakery</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/barbershop.png"/>
-            <p class="examples__imageText">Barber Shop</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/beauty-salon-v2.png"/>
-            <p class="examples__imageText">Beauty Salon</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/beautystore-singlepage.png"/>
-            <p class="examples__imageText">Beauty Store</p>
-          </div>
-          
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/benque.png"/>
-            <p class="examples__imageText">Fashion</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/biography.png"/>
-            <p class="examples__imageText">Biography</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/blank.png"/>
-            <p class="examples__imageText">Blank</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/blinds.png"/>
-            <p class="examples__imageText">Blinds</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/bodyguard.png"/>
-            <p class="examples__imageText">Body Guard</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business education">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/bookstore2-singlepage.png"/>
-            <p class="examples__imageText">Bookstore</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/brick-paver.png"/>
-            <p class="examples__imageText">Brick Paver</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/bricklayer.png"/>
-            <p class="examples__imageText">Brick Layer</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/burger-cafe.png"/>
-            <p class="examples__imageText">Burger Cafe</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/business-center.png"/>
-            <p class="examples__imageText">Business Center</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/car-dealer.png"/>
-            <p class="examples__imageText">Car Dealer</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business education">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/careerservices.png"/>
-            <p class="examples__imageText">Career Services</p>
-          </div>
-          
-          <div class="col-md-6 examples__imageGroup filter art business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/carpenter.png"/>
-            <p class="examples__imageText">Carpenter</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home logistics">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/carrental.png"/>
-            <p class="examples__imageText">Car Rental</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/cateringservices.png"/>
-            <p class="examples__imageText">Catering Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business community">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/charity.png"/>
-            <p class="examples__imageText">Charity</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business community">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/childcare_v2.png"/>
-            <p class="examples__imageText">Child Care</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/cityhotel.png"/>
-            <p class="examples__imageText">City Hotel</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/cleaningservices.png"/>
-            <p class="examples__imageText">Cleaning Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/coffee-house-v2.png"/>
-            <p class="examples__imageText">Coffee Shop</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/concreteslabs.png"/>
-            <p class="examples__imageText">Concrete Slabs</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/conferencev3.png"/>
-            <p class="examples__imageText">Conference</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/consultant.png"/>
-            <p class="examples__imageText">Consultant</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/cosmetic-surgery.png"/>
-            <p class="examples__imageText">Cosmetic Surgery</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter art portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/creativeportfolio.png"/>
-            <p class="examples__imageText">Creative Portfolio</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter health travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/crossfit-v2.png"/>
-            <p class="examples__imageText">Cross Fit</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business entertainment health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/dancestudiov2.png"/>
-            <p class="examples__imageText">Dance Studio</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/dentist.png"/>
-            <p class="examples__imageText">Dentist</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/dentistv2.png"/>
-            <p class="examples__imageText">Dentist V2</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/digital-agency.png"/>
-            <p class="examples__imageText">Digital Agency</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business entertainment">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/dj.png"/>
-            <p class="examples__imageText">DJ</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/electrician.png"/>
-            <p class="examples__imageText">Electrician</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/equipment-rental.png"/>
-            <p class="examples__imageText">Equipment Rental</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business entertainment">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/event-venue.png"/>
-            <p class="examples__imageText">Event Venue</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business fashion portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashion-designer.png"/>
-            <p class="examples__imageText">Fashion Designer</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashion-store.png"/>
-            <p class="examples__imageText">Fashion Store</p>
-          </div>
-          
-          <div class="col-md-6 examples__imageGroup filter business fashion portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashioncollection.png"/>
-            <p class="examples__imageText">Fashion Collection</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/financial-planners.png"/>
-            <p class="examples__imageText">Financial Planners</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion health travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/fitness-gym-v2.png"/>
-            <p class="examples__imageText">Fitness Gym </p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/freshproduce.png"/>
-            <p class="examples__imageText">Fresh Produce</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/funeral-services.png"/>
-            <p class="examples__imageText">Funeral Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/furniture-collection.png"/>
-            <p class="examples__imageText">Furniture Collection</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/gardener.png"/>
-            <p class="examples__imageText">Gardener</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/glass-repairs.png"/>
-            <p class="examples__imageText">Glass Repairs</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business food health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/grapefarm.png"/>
-            <p class="examples__imageText">Grape Farm</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/grocerystorev2-singlepage.png"/>
-            <p class="examples__imageText">Grocery Store</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/hair-salon.png"/>
-            <p class="examples__imageText">Hair Salon</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/handyman.png"/>
-            <p class="examples__imageText">Handyman</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/hartford.png"/>
-            <p class="examples__imageText">Product Page</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/homebuilders.png"/>
-            <p class="examples__imageText">Home Builders</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/homedecor.png"/>
-            <p class="examples__imageText">Home Decor</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/humanresources.png"/>
-            <p class="examples__imageText">Human Resources</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/insurance-broker.png"/>
-            <p class="examples__imageText">Insurance Broker</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/interior-designer.png"/>
-            <p class="examples__imageText">Interior Designer</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/interiorcollections.png"/>
-            <p class="examples__imageText">Interior Collections</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/investpro.png"/>
-            <p class="examples__imageText">Financial Planners</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/itservicesv2.png"/>
-            <p class="examples__imageText">IT Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/kitchen-wardrobes.png"/>
-            <p class="examples__imageText">Kitchen Wardrobes</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business photography portfolio travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/landscape-photographer.png"/>
-            <p class="examples__imageText">Landscape Photographer</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/landscapedesign.png"/>
-            <p class="examples__imageText">Landscape Design</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/law-firm.png"/>
-            <p class="examples__imageText">Law Firm</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business community home travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/lifecoach.png"/>
-            <p class="examples__imageText">Life Coach</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business logistics">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/limo-services.png"/>
-            <p class="examples__imageText">Limo Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/local-cafe-v2.png"/>
-            <p class="examples__imageText">Local Cafe</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/locksmith-v2.png"/>
-            <p class="examples__imageText">Locksmith</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business logistics">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/logistics.png"/>
-            <p class="examples__imageText">Logistics</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business logistics">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/logisticsfreight.png"/>
-            <p class="examples__imageText">Logistic Freight</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/makeupartist.png"/>
-            <p class="examples__imageText">Make Up Artist</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business fashion home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/manicureservices.png"/>
-            <p class="examples__imageText">Manicure Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/marketing-agency.png"/>
-            <p class="examples__imageText">Marketing Agency</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/medical-clinic-v2.png"/>
-            <p class="examples__imageText">Medical Clinic</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business entertainment">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/mobile-app.png"/>
-            <p class="examples__imageText">Mobile App</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/mortgage-brokers.png"/>
-            <p class="examples__imageText">Mortgage Brokers</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/mortgage.png"/>
-            <p class="examples__imageText">Mortgage</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home logistics">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/movingcompany.png"/>
-            <p class="examples__imageText">Moving Company</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/painters.png"/>
-            <p class="examples__imageText">Painters</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business entertainment">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/partyplanning.png"/>
-            <p class="examples__imageText">Party Planning</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/personal-trainer-gym.png"/>
-            <p class="examples__imageText">Personal Trainer</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/pest-control.png"/>
-            <p class="examples__imageText">Pest Control</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter art business photography portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/photographer.png"/>
-            <p class="examples__imageText">Photographer</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business community health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/physiotherapist.png"/>
-            <p class="examples__imageText">Physiotherapist</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/pizza-restaurant.png"/>
-            <p class="examples__imageText">Pizza Restaurant</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/plasterer.png"/>
-            <p class="examples__imageText">Plasterer</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/plumber.png"/>
-            <p class="examples__imageText">Plumber</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter art portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/portfolio.png"/>
-            <p class="examples__imageText">Portfolio</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/property-management.png"/>
-            <p class="examples__imageText">Property Management</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/realestatev3.png"/>
-            <p class="examples__imageText">Real Estate</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter entertainment">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/rock-band.png"/>
-            <p class="examples__imageText">Rock Band</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/roofcarpenters.png"/>
-            <p class="examples__imageText">Roof Carpenters</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/seafood-restaurant.png"/>
-            <p class="examples__imageText">Seafood Restaurant</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/security-services.png"/>
-            <p class="examples__imageText">Security Services</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/seo-agency.png"/>
-            <p class="examples__imageText">SEO Agency</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/smash-repairs-v2.png"/>
-            <p class="examples__imageText">Auto Repairs</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business community">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/soccerclub.png"/>
-            <p class="examples__imageText">Soccer Club</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/solar-panels-v2.png"/>
-            <p class="examples__imageText">Solar Panels</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/spa-v2.png"/>
-            <p class="examples__imageText">Spa</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/storage.png"/>
-            <p class="examples__imageText">Storage</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/sushi-restaurant-v2.png"/>
-            <p class="examples__imageText">Sushi Restaurant</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business fashion home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/tailor-shop.png"/>
-            <p class="examples__imageText">Tailor</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/tattoo-studio.png"/>
-            <p class="examples__imageText">Tattoo Studio</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/tiler.png"/>
-            <p class="examples__imageText">Tiler</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/tour-guide-v2.png"/>
-            <p class="examples__imageText">Tour Guide</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/tourevent.png"/>
-            <p class="examples__imageText">Tour Event</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/toystorev2-singlepage.png"/>
-            <p class="examples__imageText">Toy Store</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business education">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/training-courses.png"/>
-            <p class="examples__imageText">Training Courses</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business education travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/travelblog.png"/>
-            <p class="examples__imageText">Travel Blog</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/traveltours.png"/>
-            <p class="examples__imageText">Travel Tours</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/tyrerepairs.png"/>
-            <p class="examples__imageText">Tire Repairs</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/veterinaryclinicv2.png"/>
-            <p class="examples__imageText">Veterinary Clinic</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business travel">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/villarental.png"/>
-            <p class="examples__imageText">Villa Rental</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business food">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/water-delivery-v2.png"/>
-            <p class="examples__imageText">Water Delivery</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/wedding-event-v2.png"/>
-            <p class="examples__imageText">Wedding Event</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/wedding-planner.png"/>
-            <p class="examples__imageText">Wedding Planner</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/welder-v2.png"/>
-            <p class="examples__imageText">Welder</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business home">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/windowcleaners.png"/>
-            <p class="examples__imageText">Window Cleaners</p>
-          </div>
-          <div class="col-md-6 examples__imageGroup filter business education portfolio">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/writer.png"/>
-            <p class="examples__imageText">Writer</p>
-          </div>
-
-          <div class="col-md-6 examples__imageGroup filter business fashion health">
-            <img class="examples__image" loading="lazy"  alt="website" src="img/all/yoga.png"/>
-            <p class="examples__imageText">Yoga</p>
-          </div>
-
+      </div>
+      <div class="row">
+        <div class="col-md-12 preview__icons">
+          <div class="preview__svgContainer preview__desktop">
+            <svg width="44" height="40" viewBox="0 0 44 40" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 0H4C1.79 0 0 1.79 0 4V28C0 30.21 1.79 32 4 32H18V36H14V40H30V36H26V32H40C42.21 32 44 30.21 44 28V4C44 1.79 42.21 0 40 0ZM40 28H4V4H40V28Z" class="preview__svg preview__iconSelected" fill="#A7A7A7"/>
+              <path d="M40 0H4C1.79 0 0 1.79 0 4V28C0 30.21 1.79 32 4 32H18V36H14V40H30V36H26V32H40C42.21 32 44 30.21 44 28V4C44 1.79 42.21 0 40 0ZM40 28H4V4H40V28Z" fill="white" fill-opacity="0"/>
+            </svg>
+          </div>
+          <div class="preview__svgContainer preview__mobile">
+            <svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5417 0.583008H4.87502C2.69002 0.583008 0.916687 2.35634 0.916687 4.54134V31.458C0.916687 33.643 2.69002 35.4163 4.87502 35.4163H17.5417C19.7267 35.4163 21.5 33.643 21.5 31.458V4.54134C21.5 2.35634 19.7267 0.583008 17.5417 0.583008ZM11.2084 33.833C9.89419 33.833 8.83335 32.7722 8.83335 31.458C8.83335 30.1438 9.89419 29.083 11.2084 29.083C12.5225 29.083 13.5834 30.1438 13.5834 31.458C13.5834 32.7722 12.5225 33.833 11.2084 33.833ZM18.3334 27.4997H4.08335V5.33301H18.3334V27.4997Z" class="preview__svg" fill="#A7A7A7"/>
+              <path d="M17.5417 0.583008H4.87502C2.69002 0.583008 0.916687 2.35634 0.916687 4.54134V31.458C0.916687 33.643 2.69002 35.4163 4.87502 35.4163H17.5417C19.7267 35.4163 21.5 33.643 21.5 31.458V4.54134C21.5 2.35634 19.7267 0.583008 17.5417 0.583008ZM11.2084 33.833C9.89419 33.833 8.83335 32.7722 8.83335 31.458C8.83335 30.1438 9.89419 29.083 11.2084 29.083C12.5225 29.083 13.5834 30.1438 13.5834 31.458C13.5834 32.7722 12.5225 33.833 11.2084 33.833ZM18.3334 27.4997H4.08335V5.33301H18.3334V27.4997Z" fill="white" fill-opacity="0"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 preview__iframeSection">
+          <iframe name="iframePreview" class="preview__iframe">
+          </iframe>
+          <!-- <iframe name="iframePreview" class="preview__iframe preview__iframe--mobile">
+          </iframe> -->
         </div>
       </div>
     </div>
@@ -647,28 +1570,63 @@
   <script>
   $(document).ready(function(){
 
+  //Filtering logic
     $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
-        
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
+      var value = $(this).attr('data-filter');
+      if(value == "all") {
+        $('.filter').show('1000');
+      }
+      else {
+        $(".filter").not('.'+value).hide('3000');
+        $('.filter').filter('.'+value).show('3000');
+      }
     });
 
-    if ($(".examples__subCategory").removeClass("active")) {
-    $(this).removeClass("active");
+    $('.examples__subCategory').click(function(){
+        $('.examples__subCategory.examples__selected').removeClass('examples__selected');
+        $(this).addClass('examples__selected');
+    })
+
+
+  //Sticky logic
+    var elementPosition = $('.examples__stickyColumn').offset();
+    $(window).scroll(function(){
+      if($(window).scrollTop() > elementPosition.top){
+        $('.examples__stickyColumn').css('position','fixed').css('top','0');
+        $('.examples__stickyPlaceholderColumn').css('display','block');
+      } else {
+        $('.examples__stickyColumn').css('position','static');
+        $('.examples__stickyPlaceholderColumn').css('display','none');
+      }    
+    });
+
+
+  //Preview and Examples logic
+    function myFunction() { 
+      document.getElementById("examples").style.display="none"; 
+      document.getElementById("preview").style.display="block"; 
     }
-    $(this).addClass("active");
+    // $('.preview__svgContainer').click(function(){
+    //   if ( $('.preview__svg').hasClass('preview__iconSelected')) {
+    //     $('.preview__svg').removeClass('preview__iconSelected');
+    //   } else {
+    //     $('.preview__svg').addClass('preview__iconSelected');
+    //   }
+    // })
+
+    $('.preview__svgContainer').click(function(){
+        $('.preview__svg.preview__iconSelected').removeClass('preview__iconSelected');
+        $('.preview__svg').addClass('preview__iconSelected');
+    })
+
+    $('.preview__mobile').click(function(){
+      $('.preview__iframe').addClass('preview__iframe--mobile')
+    });
+    $('.preview__desktop').click(function(){
+      if($('.preview__iframe').hasClass('preview__iframe--mobile')) {
+        $('.preview__iframe').removeClass('preview__iframe--mobile')
+      }
+    });
 
   });
 </script>
