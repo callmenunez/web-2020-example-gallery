@@ -8,6 +8,7 @@
     font-size: 55px;
     line-height: 64px;
     margin: 10px 0;
+    color:#ffffff;
   }
   &__text {
     font-family: 'Open Sans', Helvetica, sans-serif;
@@ -15,6 +16,7 @@
     line-height: 34px;
     font-weight: 300;
     margin: 10px 0;
+    color:#ffffff;
   }
   &__image {
     width: 100%;
@@ -28,6 +30,9 @@
   }
   &__stickyColumn {
     position: relative;
+  }
+  &__mobileCategories {
+    display: none;
   }
   &__category {
     font-family: 'Open Sans', Helvetica, sans-serif;
@@ -114,7 +119,6 @@
     color: rgba(0, 0, 0, 0.6);
   }
 }
-
 .preview {
   padding: 60px 0 80px;
   &__back {
@@ -127,6 +131,7 @@
       cursor: pointer;
       color: #BD2380;
       transition: .25s; 
+      text-decoration: none;
     }
   }
   &__icons {
@@ -174,6 +179,112 @@
     &--mobile {
       width: 320px;
       height: 885px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    &__image {
+      display: none;
+    }
+    &__header {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  .examples {
+    padding-top: 20px;
+    &__mobileCategories {
+      display: block;
+    }
+    &__desktopCategories {
+      display: none;
+    }
+    &__websiteExamples{
+      padding-top: 20px;
+    }
+    &__stickyPlaceholderColumn {
+      display: none;
+    }
+    &__stickyColumn {
+      display: none;
+    }
+    &__imageGroup {
+      margin-bottom: 50px;
+      padding: 0;
+    }
+    &__overlay {
+      &:hover {
+        display: none;
+      }
+    }
+    &__imageLink {
+      display: flex;
+      opacity: 0;
+    }
+    &__category {
+      font-size: 30px;
+      line-height: 1;
+      padding-bottom: 16px;
+      text-align: center;
+      &:after {
+        content: none;
+      }
+    }
+    &__mobileNav {
+      padding: 18px 20px 18px 10px;
+      border: solid 1px #D4D4D4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+    }
+    &__mobileSelected {
+      font-size: 18px;
+      color: #BD2380;
+      line-height: 1;
+      margin: 0;
+    }
+    &__mobileDropDown {
+      display: none;
+      padding: 20px 15px;
+      background: rgba(17, 100, 243, 0.04);
+    }
+    &__mobileSubCategory {
+      margin-left: 10px;
+      font-size: 15px;
+      line-height: 35px;
+      &:before {
+        content: "—";
+        opacity: 0;
+      }
+    }
+    &__mobileSelectedDropDown {
+      font-weight: 700;
+      color: #BD2380;
+      &:before {
+        content: "—";
+        opacity: 1;
+      }
+    }
+    &__mobileArrow {
+      transition: transform 1s;
+    }
+    &__mobileArrowFlip {
+      transform: rotate(-180deg);
+      transition: .5s;
+    }
+  }
+  .preview {
+    &__icons {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    &__svgContainer {
+      display: none;
     }
   }
 }
