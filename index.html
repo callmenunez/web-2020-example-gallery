@@ -22,6 +22,9 @@
   function hideExamples() { 
     document.getElementById("examples").style.display="none"; 
     document.getElementById("preview").style.display="block"; 
+    $(document).ready(function(){
+        $(window).scrollTop(0);
+    });
   }
   function hidePreview() { 
     document.getElementById("examples").style.display="block"; 
@@ -29,6 +32,15 @@
   }
 </script>
 <body>
+  <!-- <section class="remove" style="height: 105px; position:fixed; top: 0; width:100%; background-color: pink;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </section> -->
   <div id="examples">
     <section class="hero">
       <div class="container">
@@ -48,60 +60,58 @@
         <div class="row">
           <div class="examples__desktopCategories">
             <div class="col-md-3 examples__stickyPlaceholderColumn">
-            </div>
-            <div class="col-md-3 examples__stickyColumn">
-              <h1 class="examples__category">
-                Categories
-              </h1>
-              <p class="examples__subCategory filter-button examples__selected" data-filter="all">
-                All
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="art">
-                Art &amp; Design
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="business">
-                Business &amp; Services
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="community">
-                Community &amp; Non-Profit
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="education">
-                Education
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="entertainment">
-                Entertainment &amp; Media
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="fashion">
-                Fashion &amp; Beauty
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="food">
-                Food &amp; Restaurant
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="health">
-                Health &amp; Fitness
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="home">
-                Home &amp; Living
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="logistics">
-                Logistics
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="photography">
-                Photography
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="popular">
-                Popular
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="portfolio">
-                Portfolio
-              </p>
-              <p class="examples__subCategory filter-button" data-filter="travel">
-                Travel &amp; Lifestyle
-              </p>
-            </div>
+            <!-- </div> -->
+              <div class="col examples__stickyColumn">
+                <h1 class="examples__category">
+                  Categories
+                </h1>
+                <p class="examples__subCategory filter-button examples__selected" data-filter="all">
+                  All
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="art">
+                  Art &amp; Design
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="business">
+                  Business &amp; Services
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="community">
+                  Community &amp; Non-Profit
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="education">
+                  Education
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="entertainment">
+                  Entertainment &amp; Media
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="fashion">
+                  Fashion &amp; Beauty
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="food">
+                  Food &amp; Restaurant
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="health">
+                  Health &amp; Fitness
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="home">
+                  Home &amp; Living
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="logistics">
+                  Logistics
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="photography">
+                  Photography
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="portfolio">
+                  Portfolio
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="travel">
+                  Travel &amp; Lifestyle
+                </p>
+              </div>
+          </div>
           </div>
           <div class="examples__mobileCategories">
-            <div class="col-sm-12">
+            <div class="col-sm-12 examples__widthFix">
               <h1 class="examples__category">
                 Categories
               </h1>
@@ -266,7 +276,7 @@
             <div class="col-md-6 examples__imageGroup filter business fashion">
               <div class="examples__overlay">
                 <a href="https://barber-shop.siteplus.com" 
-                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  target="iframePreview" class="examples__imageLink" onclick="hideExamples()">
                   Preview
                 </a>
               </div>
@@ -1595,7 +1605,7 @@
         <div class="col-md-12">
           <span>
             <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.666611 4.5L4.91661 8.75L5.9189 7.74771L2.67119 4.5L5.9189 1.25229L4.91661 0.25L0.666611 4.5Z" class="examples__backArrow" fill="#A7A7A7"/>
+              <path d="M0.666611 4.5L4.91661 8.75L5.9189 7.74771L2.67119 4.5L5.9189 1.25229L4.91661 0.25L0.666611 4.5Z" class="examples__backArrow" fill="#BD2380"/>
             </svg>
             <a href="#" onclick="hidePreview()" class="preview__back">Back</a>
           </span>
@@ -1621,6 +1631,20 @@
         <div class="col-md-12 preview__iframeSection">
           <iframe name="iframePreview" class="preview__iframe preview__iframe--desktop">
           </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer" id="footer" style="background-color: orange;height: 750px;clear: both;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="hero__header">Templates</h1>
+          <p class="hero__text">Kick-start your website with these powerful templates, made for every industry. Customise one and unleash your extraordinary website online.</p>
+        </div>
+        <div class="col-md-4">
+          <img class="hero__image" alt="Laptop image with a website up on the display" src="https://getstarted.web.com/web-template/img/laptop.png"/>
         </div>
       </div>
     </div>
@@ -1658,16 +1682,55 @@
     })
 
   //Sticky logic
-    var elementPosition = $('.examples__stickyColumn').offset();
-    $(window).scroll(function(){
-      if($(window).scrollTop() > elementPosition.top){
-        $('.examples__stickyColumn').css('position','fixed').css('top','0');
-        $('.examples__stickyPlaceholderColumn').css('display','block');
-      } else {
-        $('.examples__stickyColumn').css('position','static');
-        $('.examples__stickyPlaceholderColumn').css('display','none');
-      }    
+    // var elementPosition = $('.examples__stickyColumn').offset();
+    // $(window).scroll(function(){
+    //   if($(window).scrollTop() > 360){
+    //     $('.examples__stickyColumn').css('position','fixed').css('top','105px');
+    //   } else {
+    //     $('.examples__stickyColumn').css('position','static');
+    //   }   
+      
+    //   //if we scroll to the bottom fix stickyColumn to bottom of .examples
+    //   $(window).bind('scroll', function() {
+    //     if($(window).scrollTop() >= $('.examples').offset().top + $('.examples').outerHeight() - window.innerHeight) {
+    //       $('.examples__stickyColumn').css('position','fixed').css('bottom','750px').css('top','initial');
+    //       console.log('end reached');
+    //     }
+    //   });
+    // });
+
+
+  $(function() {
+
+
+    var top = $('.examples__stickyColumn').offset().top - parseFloat($('.examples__stickyColumn').css('marginTop').replace(/auto/, 0));
+    // var footTop = $('.footer').offset().top - parseFloat($('.footer').css('marginTop').replace(/auto/, 0));
+    
+    var footTop = window.scrollY + document.querySelector('.footer').getBoundingClientRect().top
+
+    var maxY = footTop - $('.examples__stickyColumn').outerHeight();
+
+    $(window).scroll(function(evt) {
+        var y = $(this).scrollTop();
+        if (y > top) {
+            if (y < maxY) {
+                $('.examples__stickyColumn').addClass('examples__stickyColumnFixed').removeAttr('style');
+            } else {
+                $('.examples__stickyColumn').removeClass('examples__stickyColumnFixed').css({
+                    position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
+        } else {
+            $('.examples__stickyColumn').removeClass('examples__stickyColumnFixed');
+        }
+        console.log(footTop + ", " + maxY + ", " + y)
+
     });
+  });
+
+
+
 
   //Mobile Categories 
     $(".examples__mobileNav").on('click', function() {
@@ -1677,6 +1740,8 @@
     $(".examples__mobileSubCategory").on('click', function() {
       var text = $(this).text();
       $('.examples__mobileSelected').replaceWith('<p class="examples__mobileSelected">' + text + '</p>');
+      $(".examples__mobileDropDown").slideToggle();
+      $('.examples__mobileArrow').toggleClass('examples__mobileArrowFlip');
       $('.examples__mobileSubCategory.examples__mobileSelectedDropDown').removeClass('examples__mobileSelectedDropDown');
       $(this).addClass('examples__mobileSelectedDropDown');
     });
@@ -1705,8 +1770,6 @@
         $('.preview__svgDesktop').addClass('preview__iconSelected');
         $('.preview__iframe').removeClass('preview__iframe--mobile')
     });
-
-
 
   });
 </script>
