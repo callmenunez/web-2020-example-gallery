@@ -60,7 +60,6 @@
         <div class="row">
           <div class="examples__desktopCategories">
             <div class="col-md-3 examples__stickyPlaceholderColumn">
-            <!-- </div> -->
               <div class="col examples__stickyColumn">
                 <h1 class="examples__category">
                   Categories
@@ -171,7 +170,7 @@
               </div>
             </div>
           </div>
-
+          
           <div class="col-md-9 examples__websiteExamples">
 
             <div class="col-md-6 examples__imageGroup filter business education">
@@ -1636,7 +1635,7 @@
     </div>
   </section>
 
-  <section class="footer" id="footer" style="background-color: orange;height: 750px;clear: both;">
+  <!-- <section class="footer" id="footer" style="background-color: orange;height: 750px;clear: both;">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
@@ -1648,7 +1647,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <script type="text/javascript" src="//www.web.com/etc/designs/web/clientlib-site/third-party/jquery/jquery-1.12.3.min.js"></script>
 
@@ -1701,16 +1700,11 @@
 
 
   $(function() {
-
-
-    var top = $('.examples__stickyColumn').offset().top - parseFloat($('.examples__stickyColumn').css('marginTop').replace(/auto/, 0));
-    // var footTop = $('.footer').offset().top - parseFloat($('.footer').css('marginTop').replace(/auto/, 0));
-    
-    var footTop = window.scrollY + document.querySelector('.footer').getBoundingClientRect().top
-
-    var maxY = footTop - $('.examples__stickyColumn').outerHeight();
+    var top = ($('.examples__stickyColumn').offset().top - 105) - parseFloat($('.examples__stickyColumn').css('marginTop').replace(/auto/, 0));
 
     $(window).scroll(function(evt) {
+        var footTop = window.scrollY + document.querySelector('.footer').getBoundingClientRect().top
+        var maxY = footTop - $('.examples__stickyColumn').outerHeight();
         var y = $(this).scrollTop();
         if (y > top) {
             if (y < maxY) {
@@ -1724,8 +1718,6 @@
         } else {
             $('.examples__stickyColumn').removeClass('examples__stickyColumnFixed');
         }
-        console.log(footTop + ", " + maxY + ", " + y)
-
     });
   });
 

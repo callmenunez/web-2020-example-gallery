@@ -3,7 +3,7 @@
   background-color: #1164F3;
   padding: 40px 0 50px;
   color: #ffffff;
-  // margin-top: 105px;
+  margin-top: -55px;
   &__header {
     font-family: 'Domine', Times, serif;
     font-size: 44px;
@@ -26,26 +26,15 @@
 }
 .examples {
   padding: 60px 0 80px;
-  // height: 32211px;
   &__stickyPlaceholderColumn {
-    // display:block;
-    height: 800px;
-    width: 210px;
-    float: left;
-    position: relative;
-    box-shadow: none;
-    border: none;
-    margin: 0;
-    padding: 0;
   }
   &__stickyColumn {
-    // position: relative;
     position: absolute;
     height: 800px;
   }
   &__stickyColumnFixed {
     position: fixed;
-    top: 0;
+    top: 105px;
   }
   &__mobileCategories {
     display: none;
@@ -138,7 +127,6 @@
 .preview {
   padding: 12px 0 60px;
   min-height: 800px;
-  // margin-top: 105px;
   &__back {
     color: #BD2380;
     font-size: 14px;
@@ -215,6 +203,9 @@
       line-height: 25px;
     }
   }
+  // #examples {
+  //   height: 23000px;
+  // }
   .examples {
     padding-top: 20px;
     &__desktopCategories {
