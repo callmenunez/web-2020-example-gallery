@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css?family=Domine:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -23,6 +22,9 @@
   function hideExamples() { 
     document.getElementById("examples").style.display="none"; 
     document.getElementById("preview").style.display="block"; 
+    $(document).ready(function(){
+        $(window).scrollTop(0);
+    });
   }
   function hidePreview() { 
     document.getElementById("examples").style.display="block"; 
@@ -30,6 +32,15 @@
   }
 </script>
 <body>
+  <!-- <section class="remove" style="height: 105px; position:fixed; top: 0; width:100%; background-color: pink;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </section> -->
   <div id="examples">
     <section class="hero">
       <div class="container">
@@ -39,7 +50,7 @@
             <p class="hero__text">Kick-start your website with these powerful templates, made for every industry. Customise one and unleash your extraordinary website online.</p>
           </div>
           <div class="col-md-4">
-            <img class="hero__image" alt="Laptop image with a website up on the display" src="img/laptop.png"/>
+            <img class="hero__image" alt="Laptop image with a website up on the display" src="https://getstarted.web.com/web-template/img/laptop.png"/>
           </div>
         </div>
       </div>
@@ -47,58 +58,119 @@
     <section class="examples">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 examples__stickyPlaceholderColumn">
+          <div class="examples__desktopCategories">
+            <div class="col-md-3 examples__stickyPlaceholderColumn">
+              <div class="col examples__stickyColumn">
+                <h1 class="examples__category">
+                  Categories
+                </h1>
+                <p class="examples__subCategory filter-button examples__selected" data-filter="all">
+                  All
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="art">
+                  Art &amp; Design
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="business">
+                  Business &amp; Services
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="community">
+                  Community &amp; Non-Profit
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="education">
+                  Education
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="entertainment">
+                  Entertainment &amp; Media
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="fashion">
+                  Fashion &amp; Beauty
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="food">
+                  Food &amp; Restaurant
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="health">
+                  Health &amp; Fitness
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="home">
+                  Home &amp; Living
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="logistics">
+                  Logistics
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="photography">
+                  Photography
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="portfolio">
+                  Portfolio
+                </p>
+                <p class="examples__subCategory filter-button" data-filter="travel">
+                  Travel &amp; Lifestyle
+                </p>
+              </div>
           </div>
-          <div class="col-md-3 examples__stickyColumn">
-            <h1 class="examples__category">
-              Categories
-            </h1>
-            <p class="examples__subCategory filter-button examples__selected" data-filter="all">
-              All
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="art">
-              Art &amp; Design
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="business">
-              Business &amp; Services
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="community">
-              Community &amp; Non-Profit
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="education">
-              Education
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="entertainment">
-              Entertainment &amp; Media
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="fashion">
-              Fashion &amp; Beauty
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="food">
-              Food &amp; Restaurant
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="health">
-              Health &amp; Fitness
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="home">
-              Home &amp; Living
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="logistics">
-              Logistics
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="photography">
-              Photography
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="popular">
-              Popular
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="portfolio">
-              Portfolio
-            </p>
-            <p class="examples__subCategory filter-button" data-filter="travel">
-              Travel &amp; Lifestyle
-            </p>
           </div>
+          <div class="examples__mobileCategories">
+            <div class="col-sm-12 examples__widthFix">
+              <h1 class="examples__category">
+                Categories
+              </h1>
+
+              <div class="examples__mobileNav">
+                <p class="examples__mobileSelected">
+                  &nbsp;&nbsp;All
+                </p>
+                <img class="examples__mobileArrow" src="https://getstarted.web.com/web-template/img/down-arrow.svg">
+              </div>
+              <div class="examples__mobileDropDown">
+                <p class="examples__mobileSubCategory filter-button examples__mobileSelectedDropDown" data-filter="all">
+                  &nbsp;&nbsp;All
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="art">
+                  &nbsp;&nbsp;Art &amp; Design
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="business">
+                  &nbsp;&nbsp;Business &amp; Services
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="community">
+                  &nbsp;&nbsp;Community &amp; Non-Profit
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="education">
+                  &nbsp;&nbsp;Education
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="entertainment">
+                  &nbsp;&nbsp;Entertainment &amp; Media
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="fashion">
+                  &nbsp;&nbsp;Fashion &amp; Beauty
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="food">
+                  &nbsp;&nbsp;Food &amp; Restaurant
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="health">
+                  &nbsp;&nbsp;Health &amp; Fitness
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="home">
+                  &nbsp;&nbsp;Home &amp; Living
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="logistics">
+                  &nbsp;&nbsp;Logistics
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="photography">
+                  &nbsp;&nbsp;Photography
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="popular">
+                  &nbsp;&nbsp;Popular
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="portfolio">
+                  &nbsp;&nbsp;Portfolio
+                </p>
+                <p class="examples__mobileSubCategory filter-button" data-filter="travel">
+                  &nbsp;&nbsp;Travel &amp; Lifestyle
+                </p>
+              </div>
+            </div>
+          </div>
+          
           <div class="col-md-9 examples__websiteExamples">
 
             <div class="col-md-6 examples__imageGroup filter business education">
@@ -108,7 +180,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/academictutoring.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/academictutoring.png"/>
               <p class="examples__imageText">Academic Tutoring</p>
             </div>
 
@@ -119,7 +191,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy" alt="website" src="img/all/accountant-v2.png"/>
+              <img class="examples__image" loading="lazy" alt="website" src="https://getstarted.web.com/web-template/img/all/accountant-v2.png"/>
               <p class="examples__imageText">Accounting</p>
             </div>
 
@@ -130,7 +202,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/agriculture-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/agriculture-v2.png"/>
               <p class="examples__imageText">Agriculture</p>
             </div>
 
@@ -141,7 +213,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/animalgroomers.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/animalgroomers.png"/>
               <p class="examples__imageText">Animal Groomers</p>
             </div>
 
@@ -152,7 +224,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/app-landing-page.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/app-landing-page.png"/>
               <p class="examples__imageText">App Landing Page</p>
             </div>
 
@@ -163,7 +235,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/architectv2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/architectv2.png"/>
               <p class="examples__imageText">Architect</p>
             </div>
 
@@ -174,7 +246,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/artist.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/artist.png"/>
               <p class="examples__imageText">Artist</p>
            </div>
             
@@ -185,7 +257,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/autorepairs.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/autorepairs.png"/>
               <p class="examples__imageText">Auto Repairs</p>
             </div>
 
@@ -196,18 +268,18 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bakery.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/bakery.png"/>
               <p class="examples__imageText">Bakery</p>
             </div>
             
             <div class="col-md-6 examples__imageGroup filter business fashion">
               <div class="examples__overlay">
                 <a href="https://barber-shop.siteplus.com" 
-                  target="iframePreview" onclick="hideExamples()" class="examples__imageLink">
+                  target="iframePreview" class="examples__imageLink" onclick="hideExamples()">
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/barbershop.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/barbershop.png"/>
               <p class="examples__imageText">Barber Shop</p>
            </div>
             
@@ -218,7 +290,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/beauty-salon-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/beauty-salon-v2.png"/>
               <p class="examples__imageText">Beauty Salon</p>
            </div>
             
@@ -229,7 +301,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/beautystore-singlepage.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/beautystore-singlepage.png"/>
               <p class="examples__imageText">Beauty Store</p>
             </div>
             
@@ -240,7 +312,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/benque.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/benque.png"/>
               <p class="examples__imageText">Fashion</p>
            </div>
             
@@ -251,7 +323,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/biography.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/biography.png"/>
               <p class="examples__imageText">Biography</p>
            </div>
             
@@ -262,7 +334,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/blank.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/blank.png"/>
               <p class="examples__imageText">Blank</p>
            </div>
             
@@ -273,7 +345,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/blinds.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/blinds.png"/>
               <p class="examples__imageText">Blinds</p>
             </div>
 
@@ -284,7 +356,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bodyguard.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/bodyguard.png"/>
               <p class="examples__imageText">Body Guard</p>
            </div>
             
@@ -295,7 +367,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bookstore2-singlepage.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/bookstore2-singlepage.png"/>
               <p class="examples__imageText">Bookstore</p>
            </div>
             
@@ -306,7 +378,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/brick-paver.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/brick-paver.png"/>
               <p class="examples__imageText">Brick Paver</p>
            </div>
             
@@ -317,7 +389,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/bricklayer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/bricklayer.png"/>
               <p class="examples__imageText">Brick Layer</p>
             </div>
 
@@ -328,7 +400,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/burger-cafe.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/burger-cafe.png"/>
               <p class="examples__imageText">Burger Cafe</p>
            </div>
             
@@ -339,7 +411,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/business-center.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/business-center.png"/>
               <p class="examples__imageText">Business Center</p>
            </div>
             
@@ -350,7 +422,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/car-dealer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/car-dealer.png"/>
               <p class="examples__imageText">Car Dealer</p>
            </div>
             
@@ -361,7 +433,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/careerservices.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/careerservices.png"/>
               <p class="examples__imageText">Career Services</p>
             </div>
             
@@ -372,7 +444,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/carpenter.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/carpenter.png"/>
               <p class="examples__imageText">Carpenter</p>
            </div>
             
@@ -383,7 +455,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/carrental.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/carrental.png"/>
               <p class="examples__imageText">Car Rental</p>
            </div>
             
@@ -394,7 +466,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cateringservices.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/cateringservices.png"/>
               <p class="examples__imageText">Catering Services</p>
            </div>
             
@@ -405,7 +477,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/charity.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/charity.png"/>
               <p class="examples__imageText">Charity</p>
             </div>
 
@@ -416,7 +488,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/childcare_v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/childcare_v2.png"/>
               <p class="examples__imageText">Child Care</p>
            </div>
             
@@ -427,7 +499,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cityhotel.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/cityhotel.png"/>
               <p class="examples__imageText">City Hotel</p>
            </div>
             
@@ -438,7 +510,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cleaningservices.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/cleaningservices.png"/>
               <p class="examples__imageText">Cleaning Services</p>
            </div>
             
@@ -449,7 +521,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/coffee-house-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/coffee-house-v2.png"/>
               <p class="examples__imageText">Coffee Shop</p>
             </div>
 
@@ -460,7 +532,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/concreteslabs.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/concreteslabs.png"/>
               <p class="examples__imageText">Concrete Slabs</p>
            </div>
             
@@ -471,7 +543,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/conferencev3.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/conferencev3.png"/>
               <p class="examples__imageText">Conference</p>
            </div>
             
@@ -482,7 +554,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/consultant.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/consultant.png"/>
               <p class="examples__imageText">Consultant</p>
            </div>
             
@@ -493,7 +565,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/cosmetic-surgery.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/cosmetic-surgery.png"/>
               <p class="examples__imageText">Cosmetic Surgery</p>
             </div>
 
@@ -504,7 +576,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/creativeportfolio.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/creativeportfolio.png"/>
               <p class="examples__imageText">Creative Portfolio</p>
            </div>
             
@@ -515,7 +587,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/crossfit-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/crossfit-v2.png"/>
               <p class="examples__imageText">Cross Fit</p>
            </div>
             
@@ -526,7 +598,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dancestudiov2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/dancestudiov2.png"/>
               <p class="examples__imageText">Dance Studio</p>
            </div>
             
@@ -537,7 +609,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dentist.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/dentist.png"/>
               <p class="examples__imageText">Dentist</p>
             </div>
 
@@ -548,7 +620,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dentistv2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/dentistv2.png"/>
               <p class="examples__imageText">Dentist V2</p>
            </div>
             
@@ -559,7 +631,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/digital-agency.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/digital-agency.png"/>
               <p class="examples__imageText">Digital Agency</p>
            </div>
             
@@ -570,7 +642,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/dj.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/dj.png"/>
               <p class="examples__imageText">DJ</p>
            </div>
             
@@ -581,7 +653,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/electrician.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/electrician.png"/>
               <p class="examples__imageText">Electrician</p>
             </div>
 
@@ -592,7 +664,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/equipment-rental.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/equipment-rental.png"/>
               <p class="examples__imageText">Equipment Rental</p>
            </div>
             
@@ -603,7 +675,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/event-venue.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/event-venue.png"/>
               <p class="examples__imageText">Event Venue</p>
            </div>
             
@@ -614,7 +686,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashion-designer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/fashion-designer.png"/>
               <p class="examples__imageText">Fashion Designer</p>
            </div>
             
@@ -625,7 +697,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashion-store.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/fashion-store.png"/>
               <p class="examples__imageText">Fashion Store</p>
             </div>
             
@@ -636,7 +708,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fashioncollection.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/fashioncollection.png"/>
               <p class="examples__imageText">Fashion Collection</p>
            </div>
             
@@ -647,7 +719,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/financial-planners.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/financial-planners.png"/>
               <p class="examples__imageText">Financial Planners</p>
            </div>
             
@@ -658,7 +730,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/fitness-gym-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/fitness-gym-v2.png"/>
               <p class="examples__imageText">Fitness Gym </p>
            </div>
             
@@ -669,7 +741,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/freshproduce.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/freshproduce.png"/>
               <p class="examples__imageText">Fresh Produce</p>
             </div>
 
@@ -680,7 +752,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/funeral-services.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/funeral-services.png"/>
               <p class="examples__imageText">Funeral Services</p>
            </div>
             
@@ -691,7 +763,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/furniture-collection.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/furniture-collection.png"/>
               <p class="examples__imageText">Furniture Collection</p>
            </div>
             
@@ -702,7 +774,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/gardener.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/gardener.png"/>
               <p class="examples__imageText">Gardener</p>
            </div>
             
@@ -713,7 +785,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/glass-repairs.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/glass-repairs.png"/>
               <p class="examples__imageText">Glass Repairs</p>
             </div>
 
@@ -724,7 +796,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/grapefarm.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/grapefarm.png"/>
               <p class="examples__imageText">Grape Farm</p>
            </div>
             
@@ -735,7 +807,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/grocerystorev2-singlepage.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/grocerystorev2-singlepage.png"/>
               <p class="examples__imageText">Grocery Store</p>
            </div>
             
@@ -746,7 +818,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/hair-salon.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/hair-salon.png"/>
               <p class="examples__imageText">Hair Salon</p>
            </div>
             
@@ -757,7 +829,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/handyman.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/handyman.png"/>
               <p class="examples__imageText">Handyman</p>
             </div>
 
@@ -768,7 +840,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/hartford.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/hartford.png"/>
               <p class="examples__imageText">Product Page</p>
            </div>
             
@@ -779,7 +851,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/homebuilders.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/homebuilders.png"/>
               <p class="examples__imageText">Home Builders</p>
            </div>
             
@@ -790,7 +862,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/homedecor.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/homedecor.png"/>
               <p class="examples__imageText">Home Decor</p>
            </div>
             
@@ -801,7 +873,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/humanresources.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/humanresources.png"/>
               <p class="examples__imageText">Human Resources</p>
             </div>
 
@@ -812,7 +884,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/insurance-broker.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/insurance-broker.png"/>
               <p class="examples__imageText">Insurance Broker</p>
            </div>
             
@@ -823,7 +895,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/interior-designer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/interior-designer.png"/>
               <p class="examples__imageText">Interior Designer</p>
            </div>
             
@@ -834,7 +906,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/interiorcollections.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/interiorcollections.png"/>
               <p class="examples__imageText">Interior Collections</p>
            </div>
             
@@ -845,7 +917,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/investpro.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/investpro.png"/>
               <p class="examples__imageText">Financial Planners</p>
             </div>
 
@@ -856,7 +928,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/itservicesv2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/itservicesv2.png"/>
               <p class="examples__imageText">IT Services</p>
            </div>
             
@@ -867,7 +939,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/kitchen-wardrobes.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/kitchen-wardrobes.png"/>
               <p class="examples__imageText">Kitchen Wardrobes</p>
            </div>
             
@@ -878,7 +950,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/landscape-photographer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/landscape-photographer.png"/>
               <p class="examples__imageText">Landscape Photographer</p>
            </div>
             
@@ -889,7 +961,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/landscapedesign.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/landscapedesign.png"/>
               <p class="examples__imageText">Landscape Design</p>
             </div>
 
@@ -900,7 +972,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/law-firm.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/law-firm.png"/>
               <p class="examples__imageText">Law Firm</p>
            </div>
             
@@ -911,7 +983,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/lifecoach.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/lifecoach.png"/>
               <p class="examples__imageText">Life Coach</p>
            </div>
             
@@ -922,7 +994,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/limo-services.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/limo-services.png"/>
               <p class="examples__imageText">Limo Services</p>
            </div>
             
@@ -933,7 +1005,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/local-cafe-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/local-cafe-v2.png"/>
               <p class="examples__imageText">Local Cafe</p>
             </div>
 
@@ -944,7 +1016,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/locksmith-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/locksmith-v2.png"/>
               <p class="examples__imageText">Locksmith</p>
            </div>
             
@@ -955,7 +1027,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/logistics.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/logistics.png"/>
               <p class="examples__imageText">Logistics</p>
            </div>
             
@@ -966,7 +1038,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/logisticsfreight.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/logisticsfreight.png"/>
               <p class="examples__imageText">Logistic Freight</p>
            </div>
             
@@ -977,7 +1049,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/makeupartist.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/makeupartist.png"/>
               <p class="examples__imageText">Make Up Artist</p>
             </div>
 
@@ -988,7 +1060,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/manicureservices.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/manicureservices.png"/>
               <p class="examples__imageText">Manicure Services</p>
            </div>
             
@@ -999,7 +1071,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/marketing-agency.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/marketing-agency.png"/>
               <p class="examples__imageText">Marketing Agency</p>
            </div>
             
@@ -1010,7 +1082,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/medical-clinic-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/medical-clinic-v2.png"/>
               <p class="examples__imageText">Medical Clinic</p>
            </div>
             
@@ -1021,7 +1093,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/mobile-app.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/mobile-app.png"/>
               <p class="examples__imageText">Mobile App</p>
             </div>
 
@@ -1032,7 +1104,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/mortgage-brokers.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/mortgage-brokers.png"/>
               <p class="examples__imageText">Mortgage Brokers</p>
            </div>
             
@@ -1043,7 +1115,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/mortgage.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/mortgage.png"/>
               <p class="examples__imageText">Mortgage</p>
            </div>
             
@@ -1054,7 +1126,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/movingcompany.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/movingcompany.png"/>
               <p class="examples__imageText">Moving Company</p>
            </div>
             
@@ -1065,7 +1137,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/painters.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/painters.png"/>
               <p class="examples__imageText">Painters</p>
             </div>
 
@@ -1076,7 +1148,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/partyplanning.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/partyplanning.png"/>
               <p class="examples__imageText">Party Planning</p>
            </div>
             
@@ -1087,7 +1159,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/personal-trainer-gym.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/personal-trainer-gym.png"/>
               <p class="examples__imageText">Personal Trainer</p>
            </div>
             
@@ -1098,7 +1170,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/pest-control.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/pest-control.png"/>
               <p class="examples__imageText">Pest Control</p>
            </div>
             
@@ -1109,7 +1181,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/photographer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/photographer.png"/>
               <p class="examples__imageText">Photographer</p>
             </div>
 
@@ -1120,7 +1192,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/physiotherapist.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/physiotherapist.png"/>
               <p class="examples__imageText">Physiotherapist</p>
            </div>
             
@@ -1131,7 +1203,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/pizza-restaurant.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/pizza-restaurant.png"/>
               <p class="examples__imageText">Pizza Restaurant</p>
            </div>
             
@@ -1142,7 +1214,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/plasterer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/plasterer.png"/>
               <p class="examples__imageText">Plasterer</p>
            </div>
             
@@ -1153,7 +1225,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/plumber.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/plumber.png"/>
               <p class="examples__imageText">Plumber</p>
             </div>
 
@@ -1164,7 +1236,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/portfolio.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/portfolio.png"/>
               <p class="examples__imageText">Portfolio</p>
            </div>
             
@@ -1175,7 +1247,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/property-management.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/property-management.png"/>
               <p class="examples__imageText">Property Management</p>
            </div>
             
@@ -1186,7 +1258,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/realestatev3.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/realestatev3.png"/>
               <p class="examples__imageText">Real Estate</p>
            </div>
             
@@ -1197,7 +1269,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/rock-band.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/rock-band.png"/>
               <p class="examples__imageText">Rock Band</p>
             </div>
 
@@ -1208,7 +1280,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/roofcarpenters.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/roofcarpenters.png"/>
               <p class="examples__imageText">Roof Carpenters</p>
            </div>
             
@@ -1219,7 +1291,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/seafood-restaurant.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/seafood-restaurant.png"/>
               <p class="examples__imageText">Seafood Restaurant</p>
            </div>
             
@@ -1230,7 +1302,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/security-services.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/security-services.png"/>
               <p class="examples__imageText">Security Services</p>
            </div>
             
@@ -1241,7 +1313,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/seo-agency.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/seo-agency.png"/>
               <p class="examples__imageText">SEO Agency</p>
             </div>
 
@@ -1252,7 +1324,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/smash-repairs-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/smash-repairs-v2.png"/>
               <p class="examples__imageText">Auto Repairs</p>
            </div>
             
@@ -1263,7 +1335,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/soccerclub.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/soccerclub.png"/>
               <p class="examples__imageText">Soccer Club</p>
            </div>
             
@@ -1274,7 +1346,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/solar-panels-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/solar-panels-v2.png"/>
               <p class="examples__imageText">Solar Panels</p>
            </div>
             
@@ -1285,7 +1357,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/spa-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/spa-v2.png"/>
               <p class="examples__imageText">Spa</p>
             </div>
 
@@ -1296,7 +1368,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/storage.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/storage.png"/>
               <p class="examples__imageText">Storage</p>
            </div>
             
@@ -1307,7 +1379,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/sushi-restaurant-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/sushi-restaurant-v2.png"/>
               <p class="examples__imageText">Sushi Restaurant</p>
            </div>
             
@@ -1318,7 +1390,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tailor-shop.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/tailor-shop.png"/>
               <p class="examples__imageText">Tailor</p>
            </div>
             
@@ -1329,7 +1401,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tattoo-studio.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/tattoo-studio.png"/>
               <p class="examples__imageText">Tattoo Studio</p>
             </div>
 
@@ -1340,7 +1412,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tiler.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/tiler.png"/>
               <p class="examples__imageText">Tiler</p>
            </div>
             
@@ -1351,7 +1423,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tour-guide-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/tour-guide-v2.png"/>
               <p class="examples__imageText">Tour Guide</p>
            </div>
             
@@ -1362,7 +1434,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tourevent.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/tourevent.png"/>
               <p class="examples__imageText">Tour Event</p>
            </div>
             
@@ -1373,7 +1445,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/toystorev2-singlepage.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/toystorev2-singlepage.png"/>
               <p class="examples__imageText">Toy Store</p>
             </div>
 
@@ -1384,7 +1456,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/training-courses.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/training-courses.png"/>
               <p class="examples__imageText">Training Courses</p>
            </div>
             
@@ -1395,7 +1467,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/travelblog.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/travelblog.png"/>
               <p class="examples__imageText">Travel Blog</p>
            </div>
             
@@ -1406,7 +1478,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/traveltours.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/traveltours.png"/>
               <p class="examples__imageText">Travel Tours</p>
            </div>
             
@@ -1417,7 +1489,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/tyrerepairs.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/tyrerepairs.png"/>
               <p class="examples__imageText">Tire Repairs</p>
             </div>
 
@@ -1428,7 +1500,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/veterinaryclinicv2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/veterinaryclinicv2.png"/>
               <p class="examples__imageText">Veterinary Clinic</p>
            </div>
             
@@ -1439,7 +1511,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/villarental.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/villarental.png"/>
               <p class="examples__imageText">Villa Rental</p>
            </div>
             
@@ -1450,7 +1522,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/water-delivery-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/water-delivery-v2.png"/>
               <p class="examples__imageText">Water Delivery</p>
            </div>
             
@@ -1461,7 +1533,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/wedding-event-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/wedding-event-v2.png"/>
               <p class="examples__imageText">Wedding Event</p>
             </div>
 
@@ -1472,7 +1544,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/wedding-planner.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/wedding-planner.png"/>
               <p class="examples__imageText">Wedding Planner</p>
            </div>
             
@@ -1483,7 +1555,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/welder-v2.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/welder-v2.png"/>
               <p class="examples__imageText">Welder</p>
            </div>
             
@@ -1494,7 +1566,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/windowcleaners.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/windowcleaners.png"/>
               <p class="examples__imageText">Window Cleaners</p>
            </div>
             
@@ -1505,7 +1577,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/writer.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/writer.png"/>
               <p class="examples__imageText">Writer</p>
             </div>
 
@@ -1516,7 +1588,7 @@
                   Preview
                 </a>
               </div>
-              <img class="examples__image" loading="lazy"  alt="website" src="img/all/yoga.png"/>
+              <img class="examples__image" loading="lazy"  alt="website" src="https://getstarted.web.com/web-template/img/all/yoga.png"/>
               <p class="examples__imageText">Yoga</p>
             </div>
 
@@ -1530,25 +1602,25 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p class="preview__back">
+          <span>
             <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.666611 4.5L4.91661 8.75L5.9189 7.74771L2.67119 4.5L5.9189 1.25229L4.91661 0.25L0.666611 4.5Z" class="examples__backArrow" fill="#A7A7A7"/>
+              <path d="M0.666611 4.5L4.91661 8.75L5.9189 7.74771L2.67119 4.5L5.9189 1.25229L4.91661 0.25L0.666611 4.5Z" class="examples__backArrow" fill="#BD2380"/>
             </svg>
-            <a href="#" onclick="hidePreview()">Back</a>
-          </p>
+            <a href="#" onclick="hidePreview()" class="preview__back">Back</a>
+          </span>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 preview__icons">
-          <div class="preview__svgContainer preview__desktop">
+          <div class="preview__svgContainer preview__svgContainer--desktop">
             <svg width="44" height="40" viewBox="0 0 44 40" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 0H4C1.79 0 0 1.79 0 4V28C0 30.21 1.79 32 4 32H18V36H14V40H30V36H26V32H40C42.21 32 44 30.21 44 28V4C44 1.79 42.21 0 40 0ZM40 28H4V4H40V28Z" class="preview__svg preview__iconSelected" fill="#A7A7A7"/>
+              <path d="M40 0H4C1.79 0 0 1.79 0 4V28C0 30.21 1.79 32 4 32H18V36H14V40H30V36H26V32H40C42.21 32 44 30.21 44 28V4C44 1.79 42.21 0 40 0ZM40 28H4V4H40V28Z" class="preview__svgDesktop preview__iconSelected" fill="#A7A7A7"/>
               <path d="M40 0H4C1.79 0 0 1.79 0 4V28C0 30.21 1.79 32 4 32H18V36H14V40H30V36H26V32H40C42.21 32 44 30.21 44 28V4C44 1.79 42.21 0 40 0ZM40 28H4V4H40V28Z" fill="white" fill-opacity="0"/>
             </svg>
           </div>
-          <div class="preview__svgContainer preview__mobile">
+          <div class="preview__svgContainer preview__svgContainer--mobile">
             <svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.5417 0.583008H4.87502C2.69002 0.583008 0.916687 2.35634 0.916687 4.54134V31.458C0.916687 33.643 2.69002 35.4163 4.87502 35.4163H17.5417C19.7267 35.4163 21.5 33.643 21.5 31.458V4.54134C21.5 2.35634 19.7267 0.583008 17.5417 0.583008ZM11.2084 33.833C9.89419 33.833 8.83335 32.7722 8.83335 31.458C8.83335 30.1438 9.89419 29.083 11.2084 29.083C12.5225 29.083 13.5834 30.1438 13.5834 31.458C13.5834 32.7722 12.5225 33.833 11.2084 33.833ZM18.3334 27.4997H4.08335V5.33301H18.3334V27.4997Z" class="preview__svg" fill="#A7A7A7"/>
+              <path d="M17.5417 0.583008H4.87502C2.69002 0.583008 0.916687 2.35634 0.916687 4.54134V31.458C0.916687 33.643 2.69002 35.4163 4.87502 35.4163H17.5417C19.7267 35.4163 21.5 33.643 21.5 31.458V4.54134C21.5 2.35634 19.7267 0.583008 17.5417 0.583008ZM11.2084 33.833C9.89419 33.833 8.83335 32.7722 8.83335 31.458C8.83335 30.1438 9.89419 29.083 11.2084 29.083C12.5225 29.083 13.5834 30.1438 13.5834 31.458C13.5834 32.7722 12.5225 33.833 11.2084 33.833ZM18.3334 27.4997H4.08335V5.33301H18.3334V27.4997Z" class="preview__svgMobile" fill="#A7A7A7"/>
               <path d="M17.5417 0.583008H4.87502C2.69002 0.583008 0.916687 2.35634 0.916687 4.54134V31.458C0.916687 33.643 2.69002 35.4163 4.87502 35.4163H17.5417C19.7267 35.4163 21.5 33.643 21.5 31.458V4.54134C21.5 2.35634 19.7267 0.583008 17.5417 0.583008ZM11.2084 33.833C9.89419 33.833 8.83335 32.7722 8.83335 31.458C8.83335 30.1438 9.89419 29.083 11.2084 29.083C12.5225 29.083 13.5834 30.1438 13.5834 31.458C13.5834 32.7722 12.5225 33.833 11.2084 33.833ZM18.3334 27.4997H4.08335V5.33301H18.3334V27.4997Z" fill="white" fill-opacity="0"/>
             </svg>
           </div>
@@ -1556,14 +1628,26 @@
       </div>
       <div class="row">
         <div class="col-md-12 preview__iframeSection">
-          <iframe name="iframePreview" class="preview__iframe">
+          <iframe name="iframePreview" class="preview__iframe preview__iframe--desktop">
           </iframe>
-          <!-- <iframe name="iframePreview" class="preview__iframe preview__iframe--mobile">
-          </iframe> -->
         </div>
       </div>
     </div>
   </section>
+
+  <!-- <section class="footer" id="footer" style="background-color: orange;height: 750px;clear: both;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="hero__header">Templates</h1>
+          <p class="hero__text">Kick-start your website with these powerful templates, made for every industry. Customise one and unleash your extraordinary website online.</p>
+        </div>
+        <div class="col-md-4">
+          <img class="hero__image" alt="Laptop image with a website up on the display" src="https://getstarted.web.com/web-template/img/laptop.png"/>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <script type="text/javascript" src="//www.web.com/etc/designs/web/clientlib-site/third-party/jquery/jquery-1.12.3.min.js"></script>
 
@@ -1581,56 +1665,106 @@
         $('.filter').filter('.'+value).show('3000');
       }
     });
-
+    $(".filter-button").on('click', function(){
+      var value = $(this).attr('data-filter');
+      if(value == "all") {
+        $('.filter').show('1000');
+      }
+      else {
+        $(".filter").not('.'+value).hide('3000');
+        $('.filter').filter('.'+value).show('3000');
+      }
+    });
     $('.examples__subCategory').click(function(){
         $('.examples__subCategory.examples__selected').removeClass('examples__selected');
         $(this).addClass('examples__selected');
     })
 
-
   //Sticky logic
-    var elementPosition = $('.examples__stickyColumn').offset();
-    $(window).scroll(function(){
-      if($(window).scrollTop() > elementPosition.top){
-        $('.examples__stickyColumn').css('position','fixed').css('top','0');
-        $('.examples__stickyPlaceholderColumn').css('display','block');
-      } else {
-        $('.examples__stickyColumn').css('position','static');
-        $('.examples__stickyPlaceholderColumn').css('display','none');
-      }    
-    });
+    // var elementPosition = $('.examples__stickyColumn').offset();
+    // $(window).scroll(function(){
+    //   if($(window).scrollTop() > 360){
+    //     $('.examples__stickyColumn').css('position','fixed').css('top','105px');
+    //   } else {
+    //     $('.examples__stickyColumn').css('position','static');
+    //   }   
+      
+    //   //if we scroll to the bottom fix stickyColumn to bottom of .examples
+    //   $(window).bind('scroll', function() {
+    //     if($(window).scrollTop() >= $('.examples').offset().top + $('.examples').outerHeight() - window.innerHeight) {
+    //       $('.examples__stickyColumn').css('position','fixed').css('bottom','750px').css('top','initial');
+    //       console.log('end reached');
+    //     }
+    //   });
+    // });
 
+
+  $(function() {
+    var top = ($('.examples__stickyColumn').offset().top - 105) - parseFloat($('.examples__stickyColumn').css('marginTop').replace(/auto/, 0));
+
+    $(window).scroll(function(evt) {
+        var footTop = window.scrollY + document.querySelector('.footer').getBoundingClientRect().top
+        var maxY = footTop - $('.examples__stickyColumn').outerHeight();
+        var y = $(this).scrollTop();
+        if (y > top) {
+            if (y < maxY) {
+                $('.examples__stickyColumn').addClass('examples__stickyColumnFixed').removeAttr('style');
+            } else {
+                $('.examples__stickyColumn').removeClass('examples__stickyColumnFixed').css({
+                    position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
+        } else {
+            $('.examples__stickyColumn').removeClass('examples__stickyColumnFixed');
+        }
+    });
+  });
+
+
+
+
+  //Mobile Categories 
+    $(".examples__mobileNav").on('click', function() {
+      $(".examples__mobileDropDown").slideToggle();
+      $('.examples__mobileArrow').toggleClass('examples__mobileArrowFlip');
+    });
+    $(".examples__mobileSubCategory").on('click', function() {
+      var text = $(this).text();
+      $('.examples__mobileSelected').replaceWith('<p class="examples__mobileSelected">' + text + '</p>');
+      $(".examples__mobileDropDown").slideToggle();
+      $('.examples__mobileArrow').toggleClass('examples__mobileArrowFlip');
+      $('.examples__mobileSubCategory.examples__mobileSelectedDropDown').removeClass('examples__mobileSelectedDropDown');
+      $(this).addClass('examples__mobileSelectedDropDown');
+    });
 
   //Preview and Examples logic
     function myFunction() { 
       document.getElementById("examples").style.display="none"; 
       document.getElementById("preview").style.display="block"; 
     }
-    // $('.preview__svgContainer').click(function(){
-    //   if ( $('.preview__svg').hasClass('preview__iconSelected')) {
-    //     $('.preview__svg').removeClass('preview__iconSelected');
-    //   } else {
-    //     $('.preview__svg').addClass('preview__iconSelected');
-    //   }
-    // })
 
-    $('.preview__svgContainer').click(function(){
-        $('.preview__svg.preview__iconSelected').removeClass('preview__iconSelected');
-        $('.preview__svg').addClass('preview__iconSelected');
-    })
-
-    $('.preview__mobile').click(function(){
-      $('.preview__iframe').addClass('preview__iframe--mobile')
-    });
-    $('.preview__desktop').click(function(){
-      if($('.preview__iframe').hasClass('preview__iframe--mobile')) {
+    $('.preview__back').click(function(){
+        $('.preview__svgMobile.preview__iconSelected').removeClass('preview__iconSelected');
+        $('.preview__svgDesktop').addClass('preview__iconSelected');
         $('.preview__iframe').removeClass('preview__iframe--mobile')
-      }
+        $('.preview__iframe').addClass('preview__iframe--desktop');
+    });
+
+    $('.preview__svgContainer--mobile').click(function(){
+        $('.preview__svgDesktop.preview__iconSelected').removeClass('preview__iconSelected');
+        $('.preview__svgMobile').addClass('preview__iconSelected');
+        $('.preview__iframe').addClass('preview__iframe--mobile') 
+    });
+
+    $('.preview__svgContainer--desktop').click(function(){
+        $('.preview__svgMobile.preview__iconSelected').removeClass('preview__iconSelected');
+        $('.preview__svgDesktop').addClass('preview__iconSelected');
+        $('.preview__iframe').removeClass('preview__iframe--mobile')
     });
 
   });
 </script>
-  <!-- <script src="js/scripts.js"></script> -->
 
 </body>
 </html>
